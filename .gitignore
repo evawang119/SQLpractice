@@ -1,4 +1,5 @@
-#The Table Structure for SQL Practice#
+#The Table Structure for SQL Practice
+
 CREATE TABLE STUDENT
 (SNO VARCHAR(3) NOT NULL, 
 SNAME VARCHAR(4) NOT NULL,
@@ -61,30 +62,3 @@ INSERT INTO TEACHER(TNO,TNAME,TSEX,TBIRTHDAY,PROF,DEPART)
 VALUES (825,'王萍','女','1972-05-05','助教','计算机系');
 INSERT INTO TEACHER(TNO,TNAME,TSEX,TBIRTHDAY,PROF,DEPART) 
 VALUES (831,'刘冰','女','1977-08-14','助教','电子工程系');
-#The practice of SQL code#
-SELECT SNAME,SSEX,CLASS
-FROM STUDENT; #Search all records in column SNAME,SSEX,CLASS from table STUDENT
-SELECT DISTINCT DEPART
-FROM TEACHER; #Search all different records in DEPART from table TEACHER
-SELECT *
-FROM STUDENT; #Search all records in STUDENT
-SELECT *
-FROM SCORE
-WHERE DEGREE BETWEEN 60 AND 80; #Search all records which degree is between 60 and 80
-SELECT *
-FROM SCORE
-WHERE DEGREE IN (85,86,88); #Search all records which degree is 85,86 or 88
-SELECT *
-FROM STUDENT
-WHERE CLASS='95031' OR SSEX='女'; #Search all records from STUDENT which CLASS is 95031 or SSEX is female
-SELECT *
-FROM STUDENT
-ORDER BY CLASS DESC; #Search all records from STUDENT and order them by descending
-SELECT *
-FROM SCORE
-ORDER BY CNO ASC,DEGREE DESC; #Search all records from SCORE and order CNO by ascending and DEGREE by descending
-SELECT COUNT(*) AS stu_num
-FROM STUDENT; #Sum students number from STUDENT which CLASS is 95031
-SELECT TOP 1 SNO,CNO
-FROM SCORE
-ORDER BY DEGREE DESC; #Search SNO and CNO from SCORE which DEGREE IS Top 1
